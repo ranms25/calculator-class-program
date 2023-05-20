@@ -15,4 +15,7 @@ class Calculator:
     
     # a method for division
     def divide(self, num1, num2):
+        if num2 ==0:
+            raise ZeroDivisionError
+        else:
             return round(num1 / num2, 2)
