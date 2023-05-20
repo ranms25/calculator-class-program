@@ -1,10 +1,9 @@
 # Define class for user interface
+from calculator import Calculator
 class UserInterface:
 
-    # Prompt user to input first number
-    def input_num1(self):
+    # A method that prompts user to input two numbers
+    def input_nums(self):
         num1 = float(input("Enter first number: "))
-
-    # Prompt user to input second number
-    def input_num2(self):
-        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        return num1, num2
