@@ -13,4 +13,6 @@ class Calculator:
     def multiply(self, num1, num2):
         return round(num1 * num2, 2)
     
-# a method for division
+    # a method for division
+    def divide(self, num1, num2):
+            return round(num1 / num2, 2)
