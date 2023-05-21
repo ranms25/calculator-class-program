@@ -1,7 +1,7 @@
 # Import modules
 import tkinter as tk
 from calculator import Calculator
-from input_validation import InputValidation
+from user_validation import UserValidation
 
 # Define class for GUI using tkinter
 class TkinterGUI():
