@@ -1,5 +1,8 @@
-# Define class for user interface
+# import modules
 from calculator import Calculator
+import tkinter as tk
+
+# Define class for user interface
 class UserInterface:
 
     # A method that prompts user choose between math operations
