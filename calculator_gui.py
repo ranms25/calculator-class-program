@@ -19,6 +19,17 @@ class TkinterGUI():
         self.operation_menu = tk.OptionMenu(self.window, self.operation_var, *operations)
         self.operation_menu.pack()
 
+        # An input feature for first number
+        self.num1_label = tk.Label(self.window, text="First number:")
+        self.num1_label.pack()
+        self.num1_entry = tk.Entry(self.window)
+        self.num1_entry.pack()
+
+        # An input feaure for second number
+        self.num2_label = tk.Label(self.window, text="Second number:")
+        self.num2_label.pack()
+        self.num2_entry = tk.Entry(self.window)
+        self.num2_entry.pack()   
 
     # Start an event loop for GUI
     def run(self):
