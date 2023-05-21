@@ -53,7 +53,7 @@ class TkinterGUI():
         try:
             result = self.uv.user_validation(num1, num2, operation)
             if result is not None:
-                self.result_label.config(text=f'Result:{result}')
+                self.result_label.config(text=f'\nResult:{result}')
             else:
                 self.result_label.config(text='Invalid output')
 
