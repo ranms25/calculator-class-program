@@ -1,18 +1,15 @@
-# import modules
-from calculator import Calculator
-
 # Define class for user interface
 class UserInterface():
 
     # A method that prompts user to input two numbers
-    def input_numbers(self):
+    def input_validation(self):
         try:
-            num1 = float(input('First number: '))
-            num2 = float(input('Second number: '))
+            num1 = float(input(num1))
+            num2 = float(input(num2))
         # Exception for value and zero division
         except ValueError:
-            return None
+            print('Invalid')
         except ZeroDivisionError:
-            return None
+            print('Invalid')
         else:
             return num1, num2

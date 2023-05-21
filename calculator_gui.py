@@ -8,11 +8,13 @@ class TkinterGUI():
     # Initialize init method
     def __init__(self):
         self.calc = Calculator()
+        self.ui = UserInterface()
         
         # Sets window and title
         self.window = tk.Tk()
         self.window.title("Simple Calculator")
-
+        self.window.geometry("500x400")
+        
         # Create a dropdown menu for math operations
         self.operation_var = tk.StringVar(value="Select Operation")     # A StringVar to store selected operations
         operations = ["Add", "Subtract", "Multiply", "Divide"]
@@ -31,13 +33,6 @@ class TkinterGUI():
         self.num2_entry = tk.Entry(self.window)
         self.num2_entry.pack()   
 
-        # A result feature for the output of two numbers
-        self.result_label = tk.Label(self.window)
-        self.result_label.pack()
-        self.calc_button = tk.Button(self.window, text="Calculate", command=self.calc)
-        self.calc_button.pack()
-
-    # Start an event loop for GUI
     def run(self):
         self.window.mainloop()
 
