@@ -17,7 +17,7 @@ class TkinterGUI():
         
         # Create a dropdown menu for math operations
         self.operation_var = tk.StringVar(value="Select Operation")     # A StringVar to store selected operations
-        operations = ["Add", "Subtract", "Multiply", "Divide"]
+        operations = ["Addition", "Subtraction", "Multiplication", "Division"]
         self.operation_menu = tk.OptionMenu(self.window, self.operation_var, *operations)
         self.operation_menu.pack()
 
@@ -41,7 +41,31 @@ class TkinterGUI():
         self.calculate_button = tk.Button(self.window, text="Clear", command=self.clear)
         self.calculate_button.pack()
 
+        # A result feature
+        self.result_label = tk.Label(self.window, text='Result:')
+        self.result_label.pack()
+
+    def calculate(self):
+        num1, num2 = self.iv.input_validation()
+        operation = self.operation_var.get()
+        
+        if num1 is not None and num2 is not None:
+            if operation == 'Addition':
+                result = self.calc.add(num1, num2)
+            elif operation == 'Subtraction':
+                result = self.calc.subtract(num1, num2)
+            elif operation == 'Multiplication':
+                result = self.calc.multiply(num1, num2)
+            elif operation == 'Division':
+                result = self.calc.divide(num1, num2)
+            else:
+                result = 'Invalid'
+            
+            self.result_label.config(text='Result: {}'.format(result))
+
+    # A method that clears the 
     def clear(self):
+        self.operation_var.set("Select Operation") # Reset the operation menu to the initial value
         self.num1_entry.delete(0, tk.END)  # Clear the first number entry
         self.num2_entry.delete(0, tk.END)  # Clear the second number entry
         self.result_label.config(text="")  # Clear the result label
