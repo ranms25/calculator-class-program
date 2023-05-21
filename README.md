@@ -13,11 +13,13 @@ I used [VS Code](https://code.visualstudio.com/download) to create and run the p
 To install the tkinter module, open up your terminal or command prompt and type:
 ```pip install tkinter```
 
-# Usage
-1. To use the calculator, select the mathematical operation you want to perform from the dropdown menu. 
-2. Then enter the first and second numbers in the input fields and click the "Calculate" button. 
-3. The result will be displayed in the result label below.
-4. You can also clear the inputs and selection by clicking the "Clear" button.
+## Usage
+1. clone or download the project and run the **main.py file**. This will open up the calculator GUI window.
+- ```git clone <repository link>```
+2. Now, To use the calculator, select the mathematical operation you want to perform from the dropdown menu. 
+3. Then enter the first and second numbers in the input fields and click the "Calculate" button. 
+4. The result will be displayed in the result label below.
+5. You can also clear the inputs and selection by clicking the "Clear" button.
 
 >![preview](preview.png)
 
