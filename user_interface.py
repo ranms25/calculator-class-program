@@ -1,16 +1,15 @@
 # import modules
 from calculator import Calculator
-import tkinter as tk
 
 # Define class for user interface
-class UserInterface:
+class UserInterface():
 
-    # A method that prompts user choose between math operations
-    def math_operations(self):
-        calc = Calculator()
+    # A constructor that initializes instance of calculator class
+    def __init__(self):
+        self.calc = Calculator()
 
     # A method that prompts user to input two numbers
-    def input_nums(self):
+    def get_numbers(self):
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
