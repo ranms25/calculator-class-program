@@ -1,5 +1,5 @@
 # Define class for user interface
-class UserInterface():
+class InputValidation():
 
     # A method that prompts user to input two numbers
     def input_validation(self):

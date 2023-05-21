@@ -1,14 +1,14 @@
 # Import modules
 import tkinter as tk
 from calculator import Calculator
-from user_interface import UserInterface
+from input_validation import InputValidation
 
 # Define class for GUI using tkinter
 class TkinterGUI():
     # Initialize init method
     def __init__(self):
         self.calc = Calculator()
-        self.ui = UserInterface()
+        self.iv = InputValidation()
         
         # Sets window and title
         self.window = tk.Tk()
@@ -31,7 +31,20 @@ class TkinterGUI():
         self.num2_label = tk.Label(self.window, text="Second number:")
         self.num2_label.pack()
         self.num2_entry = tk.Entry(self.window)
-        self.num2_entry.pack()   
+        self.num2_entry.pack()    
+
+        # A Calculate button
+        self.calculate_button = tk.Button(self.window, text="Calculate", command=self.calc)
+        self.calculate_button.pack()
+
+        # A Clear button 
+        self.calculate_button = tk.Button(self.window, text="Clear", command=self.clear)
+        self.calculate_button.pack()
+
+    def clear(self):
+        self.num1_entry.delete(0, tk.END)  # Clear the first number entry
+        self.num2_entry.delete(0, tk.END)  # Clear the second number entry
+        self.result_label.config(text="")  # Clear the result label
 
     def run(self):
         self.window.mainloop()
