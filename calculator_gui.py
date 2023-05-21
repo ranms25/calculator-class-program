@@ -12,7 +12,14 @@ class TkinterGUI():
         # Sets window and title
         self.window = tk.Tk()
         self.window.title("Simple Calculator")
-     
+
+        # Create a dropdown menu for math operations
+        self.operation_var = tk.StringVar(value="Select Operation")
+        operations = ["Add", "Subtract", "Multiply", "Divide"]
+        self.operation_menu = tk.OptionMenu(self.window, self.operation_var, *operations)
+        self.operation_menu.pack()
+
+
     # Start an event loop for GUI
     def run(self):
         self.window.mainloop()
