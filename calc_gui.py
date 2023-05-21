@@ -8,7 +8,7 @@ class TkinterGUI():
     # Initialize init method
     def __init__(self):
         self.calc = Calculator()
-        self.iv = InputValidation()
+        self.uv = UserValidation()
         
         # Sets window and title
         self.window = tk.Tk()
@@ -48,23 +48,19 @@ class TkinterGUI():
     def calculate(self):
         num1 = self.num1_entry.get()
         num2 = self.num2_entry.get()
-        operation = self.operation_var.get()
+        operation = self.operation_var.get()   
 
-        if num1 and num2 and operation != "Select Operation":
-            num1 = float(num1)
-            num2 = float(num2)
+        try:
+            result = self.uv.user_validation(num1, num2, operation)
+            if result is not None:
+                self.result_label.config(text=f'Result:{result}')
+            else:
+                self.result_label.config(text='Invalid output')
 
-            if operation == 'Addition':
-                result = self.calc.add(num1, num2)
-            elif operation == 'Subtraction':
-                result = self.calc.subtract(num1, num2)
-            elif operation == 'Multiplication':
-                result = self.calc.multiply(num1, num2)
-            elif operation == 'Division':
-                result = self.calc.divide(num1, num2)
+        except Exception as error:
+            self.result_label.config(text=str(error))
 
-            
-            self.result_label.config(text='Result: {}'.format(result))
+            # self.result_label.config(text='Result: {}'.format(result))
 
 
     # A method that clears the 
