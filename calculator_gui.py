@@ -34,7 +34,7 @@ class TkinterGUI():
         self.num2_entry.pack()    
 
         # A Calculate button
-        self.calculate_button = tk.Button(self.window, text="Calculate", command=self.calc)
+        self.calculate_button = tk.Button(self.window, text="Calculate", command=self.calculate)
         self.calculate_button.pack()
 
         # A Clear button 
@@ -42,14 +42,18 @@ class TkinterGUI():
         self.calculate_button.pack()
 
         # A result feature
-        self.result_label = tk.Label(self.window, text='Result:')
+        self.result_label = tk.Label(self.window)
         self.result_label.pack()
 
     def calculate(self):
-        num1, num2 = self.iv.input_validation()
+        num1 = self.num1_entry.get()
+        num2 = self.num2_entry.get()
         operation = self.operation_var.get()
-        
-        if num1 is not None and num2 is not None:
+
+        if num1 and num2 and operation != "Select Operation":
+            num1 = float(num1)
+            num2 = float(num2)
+
             if operation == 'Addition':
                 result = self.calc.add(num1, num2)
             elif operation == 'Subtraction':
@@ -58,10 +62,10 @@ class TkinterGUI():
                 result = self.calc.multiply(num1, num2)
             elif operation == 'Division':
                 result = self.calc.divide(num1, num2)
-            else:
-                result = 'Invalid'
+
             
             self.result_label.config(text='Result: {}'.format(result))
+
 
     # A method that clears the 
     def clear(self):
@@ -70,12 +74,9 @@ class TkinterGUI():
         self.num2_entry.delete(0, tk.END)  # Clear the second number entry
         self.result_label.config(text="")  # Clear the result label
 
-    def run(self):
-        self.window.mainloop()
-
 # Instance of Tkinter GUI to run the GUI 
 if __name__ == "__main__":
     gui = TkinterGUI()
-    gui.run()
+    gui.window.mainloop()
 
 

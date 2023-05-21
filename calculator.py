@@ -16,6 +16,6 @@ class Calculator:
     # This is a method for division
     def divide(self, num1, num2):
         if num2 ==0:                    # raise zero error value for num2
-            raise ZeroDivisionError 
+            raise ZeroDivisionError('Cannot divide by zero!')
         else:
             return round(num1 / num2, 2)    # return value is round off to two decimals
