@@ -3,4 +3,5 @@ from gui import TkinterGUI
 
 # create a class
 class ExtendedGUI(TkinterGUI):
-    pass
+    def __init__(self):
+        super().__init__()
