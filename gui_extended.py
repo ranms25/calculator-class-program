@@ -1,9 +1,13 @@
 # import necessary module
-from calculator_extended import CalculatorExtended
 from gui import TkinterGUI
+from calculator_extended import CalculatorExtended
+from user_validation import UserValidation
 
+
+from calculator_extended import CalculatorExtended
 # create a class
 class ExtendedGUI(TkinterGUI):
+    
     # create instantation
     def __init__(self):
         super().__init__()
@@ -16,3 +20,7 @@ class ExtendedGUI(TkinterGUI):
         selected_operation = self.operation_var.get()
         num1 = self.num1_entry.get()
         num2 = self.num2_entry.get()
+
+        # Instantiate the UserValidation and CalculatorExtended classes
+        self.uv = UserValidation()
+        self.ce = CalculatorExtended()
