@@ -72,8 +72,3 @@ class TkinterGUI():
         self.num1_entry.delete(0, tk.END)  # Clear the first number entry
         self.num2_entry.delete(0, tk.END)  # Clear the second number entry
         self.result_label.config(text="")  # Clear the result label
-
-# Instance of Tkinter GUI to run the GUI 
-if __name__ == "__main__":
-    gui = TkinterGUI()
-    gui.window.mainloop()

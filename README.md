@@ -1,5 +1,12 @@
-# CALCULATOR CLASS
+# CALCULATOR CLASS  [NEW FEATURE!! Don't Miss OUT ^_^ ]
 This is a simple calculator GUI built using Python's tkinter module. It allows users to perform basic mathematical operations such as addition, subtraction, multiplication and division.
+- **THE LATEST UPDATE USED INHERITANCE AS WELL AS MULTIPLE OF IT.**
+- Files added are below:
+> calculator_extended.py
+<br/>
+> gui_extended.py
+
+Update: Exponentiation have been Added. (June 4, 2023)
 
 # Getting Started
 ## Installation
@@ -21,7 +28,11 @@ To install the tkinter module, open up your terminal or command prompt and type:
 4. The result will be displayed in the result label below.
 5. You can also clear the inputs and selection by clicking the "Clear" button.
 
->![preview](preview.png)
+>![preview](images/preview.png)
+
+#  NEW FEATURE!!!
+1. Exponentiation is our latest 
+>![exponent](images/exponent.png)
 
 # Found a bug?
 ## Contribute
