@@ -24,3 +24,8 @@ class ExtendedGUI(TkinterGUI):
         # Instantiate the UserValidation and CalculatorExtended classes
         self.uv = UserValidation()
         self.ce = CalculatorExtended()
+
+        # Try Block to validate user response
+        try:
+            if selected_operation == "Exponentiation":
+                pass
