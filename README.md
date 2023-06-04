@@ -31,7 +31,8 @@ To install the tkinter module, open up your terminal or command prompt and type:
 >![preview](images/preview.png)
 
 #  NEW FEATURE!!!
-1. Exponentiation is our latest 
+1. Exponentiation is our latest feature. First number serves as the base while the Second number serves as the exponent!
+
 >![exponent](images/exponent.png)
 
 # Found a bug?
