@@ -25,9 +25,12 @@ class ExtendedGUI(TkinterGUI):
         self.uv = UserValidation()
         self.ce = CalculatorExtended()
 
-        # Try Block to validate user response
+        # Try Block to validate user response when they choose exponentiation
         try:
             if selected_operation == "Exponentiation":
                 result = self.ce.exponent(float(num1), float(num2))
                 self.result_label.config(text="\nResult: " + str(result), font=('Verdana', 12, 'bold'))
-                pass
+            else:
+                super().calculate()
+        except Exception as error:
+            self.result_label.config(text=str(error), font=('Helvetica', 10, 'italic'))
