@@ -60,7 +60,7 @@ class TkinterGUI():
         operation = self.operation_var.get()   
 
         try:
-            result = self.uv.user_validation(num1, num2, operation)
+            result = self.uv.validate_user(num1, num2, operation)
             if result is not None:
                 self.result_label.config(text="\nResult: " + str(result), font=('Verdana', 12, 'bold'))
         except Exception as error:

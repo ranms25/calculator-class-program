@@ -5,7 +5,7 @@ from calculator import Calculator
 class UserValidation():
     
     # A method that validates user interaction with the UI
-    def user_validation(self, num1, num2, operation):
+    def validate_user(self, num1, num2, operation):
         self.calc = Calculator()
         if (num1 !='' and num2 !='') and operation != 'Select Operation':
             try:
