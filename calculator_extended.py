@@ -5,7 +5,7 @@ from user_validation import UserValidation
 # inherit Calculator class to Extended Calculator class
 class CalculatorExtended(Calculator, UserValidation):
     # A NEW method for exponentiation
-    def square(self, num1, num2):
+    def exponent(self, num1, num2):
         return round(num1 ** num2, 2)
 
     # A validation method for exponentiation
@@ -14,4 +14,4 @@ class CalculatorExtended(Calculator, UserValidation):
 
         # A method that will perform calculation if the user choose this operation
         if operation == 'Exponentiation':
-            return self.square(num1, num2)
+            return self.exponent(num1, num2)
