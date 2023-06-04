@@ -28,4 +28,6 @@ class ExtendedGUI(TkinterGUI):
         # Try Block to validate user response
         try:
             if selected_operation == "Exponentiation":
+                result = self.ce.exponent(float(num1), float(num2))
+                self.result_label.config(text="\nResult: " + str(result), font=('Verdana', 12, 'bold'))
                 pass
