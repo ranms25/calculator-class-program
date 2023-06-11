@@ -1,9 +1,11 @@
 import pytest
 from gui import TkinterGUI
 
-def test_calculate():
-    gui = TkinterGUI()
+@pytest.fixture
+def gui():
+    return TkinterGUI()
 
+def test_calculate(gui):
     # Set the inputs
     gui.num1_entry.insert(0, "2")
     gui.num2_entry.insert(0, "3")
@@ -15,9 +17,7 @@ def test_calculate():
     # Check the result
     assert gui.result_label["text"] == "\nResult: 5.0"
 
-def test_clear():
-    gui = TkinterGUI()
-
+def test_clear(gui):
     # Set the inputs
     gui.num1_entry.insert(0, "2")
     gui.num2_entry.insert(0, "3")
