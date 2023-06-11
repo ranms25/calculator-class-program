@@ -35,6 +35,13 @@ To install the tkinter module, open up your terminal or command prompt and type:
 
 >![exponent](images/exponent.png)
 
+## Test
+To run the tests for your calculator-class program on Windows:
+1. Open a command prompt or terminal and navigate to the project's root directory.
+2. Ensure that pytest is installed. If not, use `pip install pytest` to install it.
+3. Run the tests using the command `pytest` in the command prompt or terminal.
+That's it! Use pytest to easily run the tests for your calculator-class program on Windows.
+
 # Found a bug?
 ## Contribute
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
