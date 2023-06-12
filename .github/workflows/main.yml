@@ -24,13 +24,11 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install tkinter
+    - name: Install dependencies
       run: |
-        if [[ "${{ matrix.runner }}" == "windows-latest" ]]; then
-          pip install tkinter
-        else
-          echo "Tkinter is pre-installed on non-Windows systems."
-        fi
+        python -m pip install --upgrade pip
+        python -m pip install pytest
+        python -m pip install tkinter
 
     - name: Run tests
       run: pytest -svv
