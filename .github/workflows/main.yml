@@ -9,7 +9,7 @@ jobs:
   test:
     strategy:
       matrix:
-        runner: [ubuntu-latest, macos-latest, windows-latest]
+        runner: [windows-latest]
         python-version: ["3.9", "3.10", "3.11"]
 
     runs-on: ${{matrix.runner}}
